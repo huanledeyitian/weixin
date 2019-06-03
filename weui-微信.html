@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>微信页面</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" type="text/css" href="weui.css"/>
+		<link rel="stylesheet" type="text/css" href="foot/1.css"/>
+		<style>
+			.fixed{
+				position: fixed;
+				bottom: 0;
+				width: 100%;
+			}
+			.weui-tab__panel{
+				height: 100%;
+				width: 100%;
+			}
+		</style>
+	</head>
+	<body ontouchstart>
+		<div class="page">
+		    <div class="page__bd" style="height: 100%;">
+		        <div class="weui-tab">
+		            <div class="weui-tab__panel"> 
+		            	<!--写内容的-->
+		            	
+						<iframe src="消息分页.html" width="100%" height="750px" name="content" frameborder="0">
+							<div class="weui-tab__panel">
+								<iframe src="通讯录分页.html" width="100%" height="750px" name="content" frameborder="0">
+									<div class="weui-tab__panel">
+										<iframe src="发现分页.html" width="100%" height="750px" name="content" frameborder="0">
+											<div class="weui-tab__panel">
+												<iframe src="我.html" width="100%" height="750px" name="content" frameborder="0">
+													
+												</iframe>
+	
+								            </div>
+										</iframe>
+										
+						            </div>
+								</iframe>
+									
+				            </div>
+						</iframe>
+						
+						
+		            </div>
+		            <div class="weui-tabbar fixed">
+		                <a href="消息分页.html" class="weui-tabbar__item weui-bar__item_on" target="content">
+		                    <span style="display: inline-block;position: relative;">
+		                        <i class="weui-tabbar__icon iconfont">&#xe62d;</i>
+		                        <span class="weui-badge" style="position: absolute;top: -2px;right: -13px;">8</span>
+		                    </span>
+		                    <p class="weui-tabbar__label">微信</p>
+		                </a>
+		                <a href="通讯录分页.html" class="weui-tabbar__item" target="content">
+		                    <i class="weui-tabbar__icon iconfont">&#xe6c2;</i>
+		                    <p class="weui-tabbar__label">通讯录</p>
+		                </a>
+		                <a href="发现分页.html" class="weui-tabbar__item" target="content">
+		                    <span style="display: inline-block;position: relative;">
+		                        <i class="weui-tabbar__icon iconfont">&#xe609;</i>
+		                        <span class="weui-badge weui-badge_dot" style="position: absolute;top: 0;right: -6px;"></span>
+		                    </span>
+		                    <p class="weui-tabbar__label">发现</p>
+		                </a>
+		                <a href="我分页.html" class="weui-tabbar__item" target="content">
+		                    <i class="weui-tabbar__icon iconfont">&#xe62a;</i>
+		                    <p class="weui-tabbar__label">我</p>
+		                </a>
+		            </div>
+		        </div>
+		    </div>
+		</div>
+	</body>
+</html>
+<!--https://www.xiaopiu.com/h5/byId?type=project&id=58777eefbebeb4b204b61fa7-->
+<script src="zepto.min.js"></script>
+<script type="text/javascript">
+    $(function(){
+        $('.weui-tabbar__item').on('click', function () {
+            $(this).addClass('weui-bar__item_on').siblings('.weui-bar__item_on').removeClass('weui-bar__item_on');
+        });
+    });
+</script>
